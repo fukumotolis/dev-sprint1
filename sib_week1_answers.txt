@@ -1,3 +1,9 @@
 *** Cut and paste the for loop here ***
 
+{% for message in messages %} 
+{{message}} 
+{ % endfor %} 
+
 *** What is the for loop doing? ***
+
+Invoking the function get_flashed_messages. I have no idea what this function does.
