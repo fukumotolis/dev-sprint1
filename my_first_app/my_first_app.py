@@ -1,4 +1,5 @@
-import flask, flask.views
+from flask import Flask, flash
+import flask.views
 import os 
 
 app = flask.Flask(__name__) # i don't understand name
@@ -10,7 +11,7 @@ class View(flask.views.MethodView):	# what's a class?
 		return flask.render_template('index.html')
 
 	def post(self):
-		result = eval (flask.request.form['expression'])
+		result = eval(flask.request.form['expression'])
 		flask.flash(result)
 		return self.get()
 
